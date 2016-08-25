@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>751</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Spotify Ripper</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QTableWidget" name="results">
+      <property name="maximumSize">
+       <size>
+        <width>1256</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>15</number>
+      </attribute>
+      <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>URI</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Song</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Artist</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Album</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Duration</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Download</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Overall Progress</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="overall_progress">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QComboBox" name="search_options">
+        <item>
+         <property name="text">
+          <string>Keyword(s)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Track</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Artist</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Album</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Playlist</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="search_bar">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="search_button">
+        <property name="text">
+         <string>Search</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="7" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Track Progress   </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="track_progress">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="download_all_songs_button">
+      <property name="text">
+       <string>Download All Songs</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Download Progress</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" rowspan="2">
+     <widget class="QLabel" name="current_download">
+      <property name="text">
+       <string>Currently Downloading: N/A</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSpotify_Ripper">
+    <property name="title">
+     <string>Preferences</string>
+    </property>
+    <addaction name="actionSpotify_Login_Details"/>
+    <addaction name="actionDownload_Preferences"/>
+   </widget>
+   <addaction name="menuSpotify_Ripper"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSpotify_Login_Details">
+   <property name="text">
+    <string>Spotify Login Details</string>
+   </property>
+  </action>
+  <action name="actionDownload_Preferences">
+   <property name="text">
+    <string>Download Preferences</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
